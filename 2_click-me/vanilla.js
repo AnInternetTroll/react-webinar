@@ -1,0 +1,10 @@
+let number = 0;
+const numberEl = document.createElement("p");
+const buttonEl = document.createElement("button");
+numberEl.innerText = number;
+buttonEl.onclick = () => numberEl.innerText = ++number;
+buttonEl.innerText = "Press me!";
+const targetEl = document.getElementById("vanilla");
+targetEl.innerHTML = `Hello, world`;
+targetEl.appendChild(numberEl);
+targetEl.appendChild(buttonEl);
