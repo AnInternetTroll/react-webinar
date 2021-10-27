@@ -1,13 +1,13 @@
-# Classes vs Functions
+# Klasser vs Funksjoner
 
-Use classes if Geir will ever see your code. Functions are better in all other
-scenarios.
+Bruk klasser hvis Geir skal se på koden din.
+Funksjoner er bedre i alle andre muligheter.
 
-# Hey, this kinda looks like
+# Hei, dette har jeg sett før 
 
 - [TC39's Class field declarations proposal](https://github.com/tc39/proposal-class-fields)
 - [Vue Components](https://vuejs.org/v2/guide/#Composing-with-Components)
 - [Svelte's custom elements](https://svelte.dev/docs#Custom_element_API)
 
-So this style of coding is popular. 
-~~I'm not gonna even look up angular~~
+Denne kode stylen er populært.
+~~Jeg skal ikke søke opp Angular~~
