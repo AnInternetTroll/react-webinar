@@ -131,3 +131,87 @@ targetEl.appendChild(buttonEl);
 <!--
 Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som `useEffect` som lar deg kjøre funksjoner når variabler endrer, ting som er mulig i vanilla JS, men da må du gjenoppfinne hjulet når det kommer om event handling.
 -->
+
+---
+
+# Komponenter
+Du kan lage dine egne tagger!
+
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+
+```tsx
+/**
+ * @jsx h
+ * @jsxFrag Fragment
+ */
+import { Component, Fragment, h, render } from "https://esm.sh/preact";
+import { useState } from "https://esm.sh/preact/hooks";
+
+class Counter extends Component {
+  constructor() {
+    super();
+    this.state = { number: 0 };
+  }
+
+  onClick() {
+    this.setState({ number: this.state.number + 1 });
+  }
+
+  render() {
+    return (
+      <div>
+        {number}
+        <button onInput={this.onClick}>Click me!</button>
+      </div>
+    );
+  }
+}
+```
+
+</template>
+
+<template v-slot:right>
+
+
+```tsx
+function Hello() {
+  return (
+    <h1>
+      Hello, world!
+    </h1>
+  );
+}
+
+function Index() {
+  return (
+    <>
+      <Hello />
+      <Counter />
+    </>
+  );
+}
+
+render(<Index />, document.body);
+
+```
+
+</template>
+---
+
+# Klasser vs Funksjoner
+
+Bruk klasser hvis Geir skal se på koden din.
+Funksjoner er bedre i alle andre muligheter.
+
+# Hei, dette har jeg sett før 
+
+- [Vanilla extend HTMLElement](https://github.com/tc39/proposal-class-fields)
+- [Vue Components](https://vuejs.org/v2/guide/#Composing-with-Components)
+- [Svelte's custom elements](https://svelte.dev/docs#Custom_element_API)
+
+Denne kode stylen er populært.
