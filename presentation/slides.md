@@ -4,25 +4,31 @@ title: React og SSR
 ---
 
 # React og SSR
+
 A brief introduction to your future job.
 
 ---
 
 # Hva er react?
 
-React er en JavaScript bibliotek/rammeverk lagdt av Facebook og lagdt ut i 2013. I dag den er brukt i mange mange steder, som microsoft sitt websites [(bare ikke ms teams enda)](https://twitter.com/rishmsft/status/1408085784016539653), finn.no, speedrun.com (cirka ~2021) og flere mer.
+React er en JavaScript bibliotek/rammeverk lagdt av Facebook og lagdt ut i 2013.
+I dag den er brukt i mange mange steder, som microsoft sitt websites
+[(bare ikke ms teams enda)](https://twitter.com/rishmsft/status/1408085784016539653),
+finn.no, speedrun.com (cirka ~2021) og flere mer.
 
 ---
 
 # Setup - JSX
-JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive react kode. 
+
+JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive
+react kode.
 
 <!--
 Først trenger du en "kompilator" fra JSX til vanlig JavaScript. Jeg skrev min egen [liten skript](../compiler.ts) med [deno](https://deno.land) og [swc](https://deno.land/x/swc), men vanlig vis skal du se mange kompilatorer, som webpack, babel, eller TypeScript (som deno bruker hvis `--no-check` er **ikke** brukt, eller så bruker den swc som er en rust ting blah blah ikke viktig)
 
-JSX sitt mål er å få dine visuele og logikk regler sammen i et fil. Den bruker XML (eller HTML) syntax i JavaScript for å gjøre det veldig lett å forstå. 
+JSX sitt mål er å få dine visuele og logikk regler sammen i et fil. Den bruker XML (eller HTML) syntax i JavaScript for å gjøre det veldig lett å forstå.
 
-Det er best forklært med en eksempel. 
+Det er best forklært med en eksempel.
 -->
 
 ---
@@ -47,6 +53,7 @@ function Index() {
 
 render(<Index />, document.getElementById("react"));
 ```
+
 </template>
 <template v-slot:right>
 
@@ -65,13 +72,15 @@ function Index() {
 
 render(h(Index, null), document.getElementById("react"));
 ```
+
 </template>
 
 ---
 
 # Hvorfor skal jeg bry meg med JSX når jeg har DOMen?
 
-JSX (og React) er lett. La oss se på et eksempel på en knapp som øker et tall når vi trykker på en knapp i vanlig JS og react.
+JSX (og React) er lett. La oss se på et eksempel på en knapp som øker et tall
+når vi trykker på en knapp i vanlig JS og react.
 
 ---
 layout: two-cols
@@ -107,6 +116,7 @@ function Index() {
 
 render(<Index />, document.getElementById("react"));
 ```
+
 </template>
 <template v-slot:right>
 
@@ -126,6 +136,7 @@ targetEl.innerHTML = `Hello, world`;
 targetEl.appendChild(numberEl);
 targetEl.appendChild(buttonEl);
 ```
+
 </template>
 
 <!--
@@ -134,15 +145,26 @@ Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som `u
 
 ---
 
+# 1. Oppgave - Cookies
+[cookie.swifu.wtf](https://cookie.swifu.wtf/) er Johans sitt vebside uten react. Kan vi lage den med react?
+
+5 min
+
+---
+
 # Komponenter
+
 Du kan lage dine egne tagger!
+
+Dette tilater deg å lage komponenter for alt i en side og det blir letere å få
+oversikt over. Som en komponent for en login box eller bare for en input
+element.
 
 ---
 layout: two-cols
 ---
 
 <template v-slot:default>
-
 
 ```tsx
 /**
@@ -177,7 +199,6 @@ class Counter extends Component {
 
 <template v-slot:right>
 
-
 ```tsx
 function Hello() {
   return (
@@ -197,7 +218,6 @@ function Index() {
 }
 
 render(<Index />, document.body);
-
 ```
 
 </template>
@@ -205,13 +225,15 @@ render(<Index />, document.body);
 
 # Klasser vs Funksjoner
 
-Bruk klasser hvis Geir skal se på koden din.
-Funksjoner er bedre i alle andre muligheter.
+Bruk klasser hvis Geir skal se på koden din. Funksjoner er bedre i alle andre
+muligheter.
 
-# Hei, dette har jeg sett før 
+# Hei, dette har jeg sett før
 
-- [Vanilla extend HTMLElement](https://github.com/tc39/proposal-class-fields)
+- [Vanilla extend HTMLElement](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
 - [Vue Components](https://vuejs.org/v2/guide/#Composing-with-Components)
 - [Svelte's custom elements](https://svelte.dev/docs#Custom_element_API)
 
 Denne kode stylen er populært.
+
+---
