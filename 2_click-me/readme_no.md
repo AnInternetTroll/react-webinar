@@ -1,6 +1,7 @@
 # Hvorfor skal jeg bry meg med JSX når jeg har DOMen?
 
-JSX (og React) er lett. La oss se på et eksempel på en knapp som øker et tall når vi trykker på en knapp i vanlig JS og react.
+JSX (og React) er lett. La oss se på et eksempel på en knapp som øker et tall
+når vi trykker på en knapp i vanlig JS og react.
 
 - React
 
@@ -46,4 +47,6 @@ targetEl.appendChild(numberEl);
 targetEl.appendChild(buttonEl);
 ```
 
-Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som `useEffect` som lar deg kjøre funksjoner når variabler endrer, ting som er mulig i vanilla JS, men da må du gjenoppfinne hjulet når det kommer om event handling. 
+Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som
+`useEffect` som lar deg kjøre funksjoner når variabler endrer, ting som er mulig
+i vanilla JS, men da må du gjenoppfinne hjulet når det kommer om event handling.

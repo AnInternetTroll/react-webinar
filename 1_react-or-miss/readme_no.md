@@ -1,8 +1,9 @@
 # JSX?
 
-JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive react kode. 
+JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive
+react kode.
 
-Det er best forklært med en eksempel. 
+Det er best forklært med en eksempel.
 
 - JSX
 
@@ -33,4 +34,5 @@ function Index() {
 render(h(Index, null), document.getElementById("react"));
 ```
 
-JSX sitt mål er å få dine visuele og logikk regler sammen i et fil. Den bruker XML (eller HTML) syntax i JavaScript for å gjøre det veldig lett å forstå. 
+JSX sitt mål er å få dine visuele og logikk regler sammen i et fil. Den bruker
+XML (eller HTML) syntax i JavaScript for å gjøre det veldig lett å forstå.

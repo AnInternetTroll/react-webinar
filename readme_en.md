@@ -8,6 +8,7 @@ finn.no, speedrun.com (since ~2021) and many many more.
 # Setup
 
 ## JSX
+
 You need a compiler from JSX to normal javascript. For sake of laziness I will
 use [a little script](../compiler.ts) I wrote with [deno](https://deno.land) and
 [swc](https://deno.land/x/swc), but in the wild you might see many compilers,

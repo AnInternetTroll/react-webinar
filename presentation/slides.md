@@ -8,6 +8,15 @@ title: React og SSR
 A brief introduction to your future job.
 
 ---
+layout: cover
+---
+
+# Hvem er denne presentasjonen for?
+1. JavaScript utviklerer.
+2. Frontend developers.
+3. Folk som vil ha en jobb.
+
+---
 
 # Hva er react?
 
@@ -150,6 +159,8 @@ Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som `u
 
 5 min
 
+Stuck? Se på [fasitten](https://git.aninternettroll.xyz/aninternettroll/react-webinar/src/branch/master/1_excercise_cookie/index.tsx) 
+
 ---
 
 # Komponenter
@@ -166,7 +177,7 @@ layout: two-cols
 
 <template v-slot:default>
 
-```tsx
+```tsx {8-26|8}
 /**
  * @jsx h
  * @jsxFrag Fragment
@@ -199,7 +210,7 @@ class Counter extends Component {
 
 <template v-slot:right>
 
-```tsx
+```tsx {1-7|1|1,11-14}
 function Hello() {
   return (
     <h1>
@@ -237,3 +248,92 @@ muligheter.
 Denne kode stylen er populært.
 
 ---
+
+# Server Side Rendering (SSR)
+
+Hvis du trenger å få data fra en database eller enn ann sted er det lurt å generere HTMLen på en Server før klienten for websiten. 
+
+---
+
+```tsx {all|7-16,19}
+#!/usr/bin/env -S deno run --allow-net --no-check
+/** @jsx h */
+import { h } from "https://esm.sh/preact";
+import render from "https://esm.sh/preact-render-to-string";
+import { listenAndServe } from "https://deno.land/std@0.113.0/http/server.ts";
+
+function Index() {
+  return (
+    <div>
+      <p>
+        Hello, world, document is {typeof document}. I am running on{" "}
+        {Deno.build.os}
+      </p>
+    </div>
+  );
+}
+
+listenAndServe(":8000", () =>
+  new Response(render(<Index />), {
+    headers: {
+      "Content-Type": "text/html",
+    },
+  }));
+
+console.log("Started on http://localhost:8000");
+```
+
+---
+layout: center
+---
+
+# Recap
+Hva har vi lært i dag?
+
+---
+layout: two-cols
+---
+
+::default::
+
+# JSX
+```jsx
+function Index() {
+    return <p>Hello, world!</p>
+}
+```
+
+# State
+```jsx
+const [state, setState] = useState(0)
+return <div>
+  <p>{state}</p>
+  <button onClick={() => setState(state + 1)}>Click me!</button>
+</div>;
+```
+
+::right::
+
+# SSR 
+```jsx
+function Page() {
+    return <html>
+      <head>
+        <title> My shopping website! </title>
+        <meta name="name:og" content="shopping" />
+      </head>
+      <body>
+        hello 
+      </body>
+    </html>
+  }
+```
+
+# Kult rammeverker
+* [AlephJS](https://alephjs.org)
+* [NextJS](https://nextjs.org)
+
+---
+
+# Q&A 
+Spørsmål?
