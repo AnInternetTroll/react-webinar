@@ -1,7 +1,2 @@
-index.js
 node_modules
-.DS_Store
-dist
-*.local
-.remote-assets
-components.d.ts
+.gitignore
