@@ -24,10 +24,6 @@ For å bruke HTML filene må du først
 1. Ha en web server (such as with `python -m http.server` or whatever)
 2. Kjør `../compiler.ts index.tsx > index.js` i hvilken folder som du er i.
 
-## SSR Advanced
-
-// nextjs?
-
 # Andre notater som jeg vet ikke hvor de skal
 
 1. Gjennom dette skal jeg snakke om react, men jeg skal faktisk bruke

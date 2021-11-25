@@ -6,6 +6,7 @@ import { Component, Fragment, h, render } from "https://esm.sh/preact";
 import { useState } from "https://esm.sh/preact/hooks";
 
 class Counter extends Component {
+  
   constructor() {
     super();
     this.state = { number: 0 };
@@ -18,8 +19,8 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        {number}
-        <button onInput={this.onClick}>Click me!</button>
+        {this.state.number}
+        <button onClick={() => this.onClick()}>Click me!</button>
       </div>
     );
   }

@@ -25,10 +25,6 @@ To run any of the html files you must first
 2. Run `../compiler.ts index.tsx > index.js` in whatever folder you happen to be
    in.
 
-## SSR Advanced
-
-// nextjs?
-
 # Sidenotes that idk where to put
 
 1. Throughout this thing I'll mention react a lot, but I'll likely be using

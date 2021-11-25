@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev",
+    "dev": "python -m http.server --directory=.. 8000 & slidev",
     "export": "slidev export"
   },
   "dependencies": {

@@ -17,6 +17,8 @@ layout: cover
 3. Folk som vil ha en jobb.
 
 ---
+layout: center
+---
 
 # Hva er react?
 
@@ -29,7 +31,7 @@ finn.no, speedrun.com (cirka ~2021) og flere mer.
 
 # Setup - JSX
 
-JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive
+JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakrere å skrive
 react kode.
 
 <!--
@@ -42,6 +44,7 @@ Det er best forklært med en eksempel.
 
 ---
 layout: two-cols
+url: "http://localhost:8000/1_react-or-miss/"
 ---
 
 <template v-slot:default>
@@ -83,6 +86,11 @@ render(h(Index, null), document.getElementById("react"));
 ```
 
 </template>
+
+---
+layout: iframe
+url: "http://localhost:8000/1_react-or-miss/"
+---
 
 ---
 
@@ -129,7 +137,7 @@ render(<Index />, document.getElementById("react"));
 </template>
 <template v-slot:right>
 
-- Vanlilla
+- Vanilla
 
 ```js
 let number = 0;
@@ -153,6 +161,14 @@ Her fra skal eksempler bare øke i komplessitet, med bruk av react hooks, som `u
 -->
 
 ---
+layout: iframe
+url: "http://localhost:8000/2_click-me/"
+---
+
+---
+layout: iframe-right
+url: "http://localhost:8000/1_excercise_cookie/"
+---
 
 # 1. Oppgave - Cookies
 [cookie.swifu.wtf](https://cookie.swifu.wtf/) er Johans sitt vebside uten react. Kan vi lage den med react?
@@ -167,7 +183,7 @@ Stuck? Se på [fasitten](https://git.aninternettroll.xyz/aninternettroll/react-w
 
 Du kan lage dine egne tagger!
 
-Dette tilater deg å lage komponenter for alt i en side og det blir letere å få
+Dette tilater deg å lage komponenter for alt i en side og det blir lettere å få
 oversikt over. Som en komponent for en login box eller bare for en input
 element.
 
@@ -199,7 +215,7 @@ class Counter extends Component {
     return (
       <div>
         {number}
-        <button onInput={this.onClick}>Click me!</button>
+        <button onInput={() => this.onClick}>Click me!</button>
       </div>
     );
   }
@@ -232,6 +248,11 @@ render(<Index />, document.body);
 ```
 
 </template>
+---
+
+---
+layout: iframe
+url: "http://localhost:8000/3_component-puzzle/"
 ---
 
 # Klasser vs Funksjoner
@@ -334,6 +355,7 @@ function Page() {
 * [NextJS](https://nextjs.org)
 
 ---
-
+layout: statement
+---
 # Q&A 
 Spørsmål?

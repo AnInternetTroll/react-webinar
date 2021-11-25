@@ -1,6 +1,6 @@
 # JSX?
 
-JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakere å skrive
+JSX er en "smak" av JavaScript (eller TypeScript) som gjør det vakerer å skrive
 react kode.
 
 Det er best forklært med en eksempel.
